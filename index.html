@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to the Carbon Footprint Calculator!</title>
+    <title>Carbon Footprint Calculator</title>
     <style>
       body {
         background-color: green;
-        background-image: url('example.jpg');
+        background-image: url('trees.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -13,41 +13,11 @@
     </style>
   </head>
   <body>
-    <p>Below You Will Be Able To Calculate Your Carbon Footprint.</p>
+    <h1>Welcome to the Carbon Footprint Calculator</h1>
+    <p>This is a website dedicated to easily calculating your carbon footprint.</p>
+  <iframe height="400px" width="100%" src="https://replit.com/@PrathikAnkala/CarbonFootprint2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-    <form>
-      <label for="age">What is your age?</label>
-      <input type="number" id="age" name="age"><br>
 
-      <label for="height">What is your height (in cm)?</label>
-      <input type="number" id="height" name="height"><br>
 
-      <label for="weight">What is your weight (in kg)?</label>
-      <input type="number" id="weight" name="weight"><br>
-
-      <button type="button" onclick="storeData()">Submit</button>
-    </form>
-
-    <script>
-      function storeData() {
-        // Get the input values and store them as integer variables
-        let age = parseInt(document.getElementById('age').value);
-        let height = parseInt(document.getElementById('height').value);
-        let weight = parseInt(document.getElementById('weight').value);
-
-        // Do something with the values (e.g. display them on the page)
-        let bmi = calculateBMI(height, weight);
-        document.write("<p>Your age is: " + age + "</p>");
-        document.write("<p>Your height is: " + height + " cm</p>");
-        document.write("<p>Your weight is: " + weight + " kg</p>");
-        document.write("<p>Your BMI is: " + bmi.toFixed(2) + "</p>");
-      }
-
-      function calculateBMI(height, weight) {
-        // Calculate the BMI using the height and weight
-        let bmi = weight / ((height / 100) ** 2);
-        return bmi;
-      }
-    </script>
-  </body>
+</body>
 </html>
